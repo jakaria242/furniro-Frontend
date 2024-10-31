@@ -8,9 +8,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'footerH': '#9F9F9F',
       },
+      maxWidth: {
+        'container': '1240px',
+      },
+      padding: {
+        '30': '30px',
+        '50': '50px',
+      },
+      // fontSize: {
+      //   '28': '18px',
+      // },
+      gap: {
+        '35': '35px',
+        '60': '60px',
+        '50': '50px',
+        '40': '40px',
+      }
     },
   },
   plugins: [],
