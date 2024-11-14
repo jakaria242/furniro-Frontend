@@ -1,13 +1,16 @@
 "use client"
 import React from 'react'
-import HomeBanner from './HomeBanner'
+import Banner from './Banner'
+import Browse from './Browse'
 
 const Home = () => {
   return (
     <>
-    <HomeBanner/>
+    <Banner/>
+    <Browse/>
     </>
   )
 }
 
 export default Home
+
