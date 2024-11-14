@@ -1,7 +1,7 @@
-import Image from "next/image";
+import HomeComponent from "../pages/home/Home";
 
 export default function Home() {
   return (
-    <h1> Hi Jakaria</h1>
+    <HomeComponent/>
   );
 }

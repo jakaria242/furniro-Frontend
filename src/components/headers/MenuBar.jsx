@@ -7,31 +7,31 @@ const MenuBar = () => {
     {
       id: 0,
       text: 'Home',
-      url: '#',
+      url: '/',
       dropdown: null,
     },
     {
       id: 1,
       text: 'Shop',
-      url: '#',
+      url: '/shop',
       dropdown: null,
     },
     {
       id: 2,
       text: 'About',
-      url: '#',
+      url: '/about',
       dropdown: null,
     },
     {
       id: 3,
       text: 'Contact',
-      url: '#',
+      url: '/contact',
       dropdown: null,
     },
     {
       id: 4,
       text: 'Blog',
-      url: '#',
+      url: '/blog',
       dropdown: null,
     },
   ]

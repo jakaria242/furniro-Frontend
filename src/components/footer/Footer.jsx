@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
 import Image from "next/image";
@@ -8,27 +9,27 @@ const Footer = () => {
     {
       id: 0,
       text: "Home",
-      url: "#",
+      url: "/",
     },
     {
       id: 1,
       text: "Shop",
-      url: "#",
+      url: "/shop",
     },
     {
       id: 2,
       text: "About",
-      url: "#",
+      url: "/about",
     },
     {
       id: 3,
       text: "Contact",
-      url: "#",
+      url: "/contact",
     },
     {
       id: 4,
       text: "Blog",
-      url: "#",
+      url: "/blog",
     },
   ];
 
@@ -49,6 +50,21 @@ const Footer = () => {
       url: "#",
     },
   ];
+
+  let [email, Setemail] = useState("")
+
+  const handleFooterEmail = (e)=> {
+    Setemail(e.target.value)
+  }
+
+  const handleSubscribe = ()=> {
+    if (email.trim() === "") {
+      alert("Please enter your email address.");
+      return;
+    }
+    console.log(email);
+    Setemail("");
+  }
 
   return (
     <footer className="pt-12 pb-8">
@@ -99,8 +115,8 @@ const Footer = () => {
           <div>
           <h4 className="capitalize text-lg font-semibold pb-50">Newsletter</h4>
            <div className="flex justify-between items-center gap-x-2">
-              <input type="email" placeholder="Enter Your Email Address" className=" outline-none border-b-2 border-black w-[215px]"/>
-              <p className=" uppercase relative after:absolute after:content-[''] after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-black cursor-pointer">SUBSCRIBE</p>
+              <input type="email" placeholder="Enter Your Email Address" className="pb-1 outline-none border-b-[1px] border-black w-[215px]" onChange={handleFooterEmail} value={email}/>
+              <p className=" uppercase text-lg relative after:absolute after:content-[''] after:w-full after:h-[1px] after:bottom-0 after:left-0 after:bg-black cursor-pointer" onClick={handleSubscribe}>SUBSCRIBE</p>
            </div>
           </div>
         </div>
